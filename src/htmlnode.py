@@ -14,7 +14,7 @@ class HTMLNode():
             return ""
         
         for key in self.props:
-            print("key ", key)
+            
             trans_list.append(f"{key}='{self.props[key]}'")
         
         return " ".join(trans_list)
