@@ -1,6 +1,6 @@
 import unittest
-from parentnode import ParentNode
-from leafnode import LeafNode
+from src.parentnode import ParentNode
+from src.leafnode import LeafNode
 
 
 class TestParentNode(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestParentNode(unittest.TestCase):
                           ]
                 )
         
-        print(node.to_html())
+        self.assertEqual(node.to_html(), "<div><p id=5 class='myclass' > cc </p>Bonjour comment</div>")
         
 if __name__ == "__main__":
     unittest.main()

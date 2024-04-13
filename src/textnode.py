@@ -1,7 +1,7 @@
-from leafnode import LeafNode
+from .leafnode import LeafNode
 class TextNode():
 
-    def __init__(self,text, text_type, url=None):
+    def __init__(self,text:str, text_type, url=None):
 
         self.text = text
         self.text_type=text_type
@@ -28,3 +28,6 @@ class TextNode():
             raise Exception('Not a known text type')
         
         return convObj[self.text_type]
+    
+    def to_html(self):
+        return self.text_node_to_html_node().to_html()

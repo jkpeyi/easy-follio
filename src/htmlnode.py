@@ -14,8 +14,9 @@ class HTMLNode():
             return ""
         
         for key in self.props:
+            key_value = int(self.props[key])  if type(self.props[key] ) is int else f"'{self.props[key]}'"
             
-            trans_list.append(f"{key}='{self.props[key]}'")
+            trans_list.append(f"{key}={key_value}")
         
         return " ".join(trans_list)
     

@@ -1,5 +1,5 @@
-from htmlnode import HTMLNode
-from leafnode import LeafNode
+from .htmlnode import HTMLNode
+from .leafnode import LeafNode
 
 from typing import List
 
