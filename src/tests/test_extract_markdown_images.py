@@ -7,10 +7,17 @@ class TestExtractMarkdownImages(unittest.TestCase):
         node = TextNode(
         "This is text with an ![image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/zjjcJKZ.png) and another ![second image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/3elNhQu.png)",'text')
        
-        print(split_nodes_image([node]))
+       # print(split_nodes_image([node]))
        # split_nodes_image([node])
 
 
+    def test_test_to_text_nodes(self):
+        text = "This is **text** with an *italic* word and a `code block` and an ![image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/zjjcJKZ.png) and a [link](https://boot.dev)"
+        a=text_to_textnodes(text)
+
+        print(a)
+        
+    
 if __name__ == "__main__":
     unittest.main()
 
