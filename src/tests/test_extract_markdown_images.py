@@ -1,5 +1,6 @@
 import unittest
-from src.utils import *
+from src.utils import text_to_textnodes , markdown_to_blocks
+from src.textnode import TextNode
 
 
 class TestExtractMarkdownImages(unittest.TestCase):
@@ -15,7 +16,19 @@ class TestExtractMarkdownImages(unittest.TestCase):
         text = "This is **text** with an *italic* word and a `code block` and an ![image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/zjjcJKZ.png) and a [link](https://boot.dev)"
         a=text_to_textnodes(text)
 
-        print(a)
+        #print(a)
+
+    
+    def test_markdown_to_blocks(self):
+        
+        with open("./src/tests/content.md",'r') as md:
+           text = md.read()
+           print(markdown_to_blocks(text))
+           md.close()
+
+        
+
+        
         
     
 if __name__ == "__main__":
