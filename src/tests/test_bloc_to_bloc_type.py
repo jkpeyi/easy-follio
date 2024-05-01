@@ -15,7 +15,7 @@ class TestExtractMarkdownImages(unittest.TestCase):
            self.assertEqual(block_to_block_type(p1),BlockType.paragraph)
            self.assertEqual(block_to_block_type(p2),BlockType.paragraph)
 
-           print(p2)
+           print(list(map(lambda i: i.strip('* ') ,filter(lambda x: x,ul.split('\n')))))
 
            
            md.close()
