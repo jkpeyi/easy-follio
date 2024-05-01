@@ -9,10 +9,10 @@ class ListNode(HTMLNode):
         items = list(
             map(lambda i: i.strip("* "), filter(lambda x: x, value.split("\n")))
         )
-        children = map(
+        children = list(map(
             lambda item: HTMLNode("li", children=text_to_textnodes(item)), items
-        )
+        ))
 
-        super().__init__(tag, value, children, props)
+        super().__init__(tag, children = children, props= props)
 
     

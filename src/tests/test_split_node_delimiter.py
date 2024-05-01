@@ -15,3 +15,5 @@ class TestUtilsFunctions(unittest.TestCase):
         nodes = utils.split_node_delimiter(nodes,'`', 'code')
         print(nodes)
 
+if __name__ == "__main__":
+    unittest.main()

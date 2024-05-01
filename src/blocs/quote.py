@@ -1,7 +1,10 @@
-from src.leafnode import LeafNode
+from src.htmlnode import HTMLNode
+from src.utils import text_to_textnodes
+class Quote(HTMLNode):
 
-class Quote(LeafNode):
+    
+    def __init__(self, value:str, props=None):
 
-    def __init__(self, value, props=None):
-        super().__init__('blockquote', value, props)
+        children = text_to_textnodes(value.strip('>'))
+        super().__init__('blockquote', children=children, props= props)
     pass
