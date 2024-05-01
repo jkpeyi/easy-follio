@@ -1,6 +1,6 @@
-from src.htmlnode import HTMLNode
+from src.parentnode import ParentNode
 from src.utils import text_to_textnodes
-class Quote(HTMLNode):
+class Quote(ParentNode):
 
     
     def __init__(self, value:str, props=None):

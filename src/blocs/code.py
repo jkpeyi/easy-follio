@@ -1,7 +1,7 @@
-from src.htmlnode import HTMLNode
+from src.parentnode import ParentNode
 from src.textnode import TextNode
 
-class Code(HTMLNode):
+class Code(ParentNode):
 
     def __init__(self, value, props=None):
 

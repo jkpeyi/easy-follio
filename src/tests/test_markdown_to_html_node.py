@@ -8,4 +8,4 @@ class TestMarkDownToHtmlNode(unittest.TestCase):
         with open("./src/tests/content.md",'r') as md:
            
            text = md.read()
-           print(markdown_to_html_node(text))
+           print(markdown_to_html_node(text).to_html())

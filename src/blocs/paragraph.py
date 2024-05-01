@@ -1,8 +1,8 @@
-from src.htmlnode import HTMLNode
+from src.parentnode import ParentNode
 from src.utils import text_to_textnodes
 
 
-class Paragraph(HTMLNode):
+class Paragraph(ParentNode):
 
     def __init__(self, value, props=None):
 

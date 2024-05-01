@@ -1,8 +1,8 @@
-from src.htmlnode import HTMLNode
+from src.parentnode import ParentNode
 from src.utils import text_to_textnodes
 
 
-class ListNode(HTMLNode):
+class ListNode(ParentNode):
 
     def __init__(self,tag, value: str, props=None):
 
@@ -10,7 +10,7 @@ class ListNode(HTMLNode):
             map(lambda i: i.strip("* "), filter(lambda x: x, value.split("\n")))
         )
         children = list(map(
-            lambda item: HTMLNode("li", children=text_to_textnodes(item)), items
+            lambda item: ParentNode("li", children=text_to_textnodes(item)), items
         ))
 
         super().__init__(tag, children = children, props= props)
