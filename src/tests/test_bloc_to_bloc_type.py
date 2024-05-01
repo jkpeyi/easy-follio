@@ -1,6 +1,6 @@
 import unittest
 from src.utils import markdown_to_blocks , block_to_block_type
-from src.types import BlockType
+from src.type import BlockType
 
 class TestExtractMarkdownImages(unittest.TestCase):
 

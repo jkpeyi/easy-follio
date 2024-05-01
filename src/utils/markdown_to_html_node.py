@@ -1,6 +1,6 @@
 from src.utils import block_to_block_type, markdown_to_blocks
 from src.parentnode import ParentNode
-from src.types import BlockType
+from src.type import BlockType
 from src.blocs import *
 
 

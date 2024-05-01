@@ -1,5 +1,5 @@
 import re
-from src.types import BlockType
+from src.type import BlockType
 
 def block_to_block_type(bloc:str):
 
