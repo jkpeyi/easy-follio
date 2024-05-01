@@ -27,7 +27,7 @@ class TestExtractMarkdownImages(unittest.TestCase):
            md.close()
 
         
-
+# TODO: Separate test cases
         
         
     
