@@ -25,7 +25,7 @@ class TextNode:
             "bold": LeafNode("b", self.text),
             "italic": LeafNode("i", self.text),
             "code": LeafNode("code", self.text),
-            "link": LeafNode("a", self.text, {"href": self.url}),
+            "link": LeafNode("a", " "+self.text, {"href": self.url}),
             "image": LeafNode(
                 "img",
                 "",

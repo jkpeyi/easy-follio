@@ -3,13 +3,13 @@ from .extract_title import extract_title
 
 def generate_page(from_path, template_path, dest_path):
 
-    print(f"Gerating page from {from_path} to {dest_path} using {template_path}")
+    #print(f"Gerating page from {from_path} to {dest_path} using {template_path}")
 
     markdown = None
     with open(from_path) as md:
         markdown = md.read()
         md.close()
-        
+
     html_template = None
     with open(template_path) as html:
         html_template = html.read()

@@ -21,5 +21,5 @@ def copy_r(dir: str, dst_dir:str = './public'):
             copy_r(abs_path, dst_dir)
         
     
-    print (dir_contents)
+   
     pass
