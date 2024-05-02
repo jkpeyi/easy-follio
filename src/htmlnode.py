@@ -18,7 +18,7 @@ class HTMLNode():
             
             trans_list.append(f"{key}={key_value}")
         
-        return " ".join(trans_list)
+        return " "+(" ".join(trans_list))
     
     def __repr__(self) -> str:
         

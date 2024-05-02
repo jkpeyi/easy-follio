@@ -11,4 +11,4 @@ class Quote(ParentNode):
         
         children = text_to_textnodes(content)
         super().__init__('blockquote', children=children, props= props)
-    pass
+    

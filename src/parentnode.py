@@ -24,4 +24,4 @@ class ParentNode(HTMLNode):
 
         for el in self.children:
             content.append(el.to_html())
-        return f"<{self.tag}>{''.join(content)}</{self.tag}>"
+        return f"<{self.tag}{ self.props_to_html()}>{''.join(content)}</{self.tag}>"

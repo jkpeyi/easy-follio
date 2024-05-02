@@ -9,4 +9,4 @@ class TestMarkDownToHtmlNode(unittest.TestCase):
            
            text = md.read()
            output=markdown_to_html_node(text).to_html()
-           
+           print(output)
