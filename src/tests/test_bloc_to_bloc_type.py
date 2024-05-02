@@ -9,7 +9,7 @@ class TestExtractMarkdownImages(unittest.TestCase):
         with open("./src/tests/content.md",'r') as md:
            
            text = md.read()
-           [p1, p2, ul ]= markdown_to_blocks(text)
+           [p1, p2, ul, ]= markdown_to_blocks(text)
 
            self.assertEqual(block_to_block_type(ul), BlockType.ul)
            self.assertEqual(block_to_block_type(p1),BlockType.paragraph)

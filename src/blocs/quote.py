@@ -5,6 +5,10 @@ class Quote(ParentNode):
     
     def __init__(self, value:str, props=None):
 
-        children = text_to_textnodes(value.strip('>'))
+        content = value.split('\n')
+        content = list(map(lambda item:item.strip('> '), content))
+        content = "\n".join(content)
+        
+        children = text_to_textnodes(content)
         super().__init__('blockquote', children=children, props= props)
     pass

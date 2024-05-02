@@ -4,7 +4,7 @@ from src.type import BlockType
 def block_to_block_type(bloc:str):
 
     heading_pattern = r'#{1,6}\s(.*)'
-    if re.match(heading_pattern, bloc) :
+    if re.match(heading_pattern, bloc):
         return BlockType.heading
     
     code_block_pattern = r'```([\s\S]*?)```'
